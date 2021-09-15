@@ -1,7 +1,7 @@
 import calendar
 from tkinter import * 
 
-def showCalender(event):
+def showCalender():
     gui=Tk()
     gui.config(background="grey")
     gui.title("Calender of the year ")
@@ -18,7 +18,7 @@ def showCalender(event):
 
 if __name__=="__main__":
     new=Tk()
-    #yearVar=StringVar()
+
     new.config(background="#c6d9f7")
     new.title("Calender")
     new.geometry("550x600")
@@ -29,16 +29,20 @@ if __name__=="__main__":
     year_field=Entry(new)
 
     #button that on clicked or on enter we show user the calender
+
     button=Button(new,text='Show Calender',bg='#ff7300',fg='black',command=showCalender)
+
+
     #if we dont want to click a button then call below bind function
     #  and add any variable in showcalander because bind function pass a eventName as an argument
     #     and remove command attribute in button column beacuse on click button it show error but on hit of enter
     #       function runs..
 
-    
-    new.bind("<Return>",showCalender)
 
-    #adjusting widget in position
+    #new.bind("<Return>",showCalender)
+
+#adjusting widget in position
+
     cal.grid(row=1,column=1)
     year.grid(row=2,column=1)
     year_field.grid(row=3,column=1)
