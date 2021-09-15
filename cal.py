@@ -30,7 +30,12 @@ if __name__=="__main__":
 
     #button that on clicked or on enter we show user the calender
     button=Button(new,text='Show Calender',bg='#ff7300',fg='black',command=showCalender)
-    #as 
+    #if we dont want to click a button then call below bind function
+    #  and add any variable in showcalander because bind function pass a eventName as an argument
+    #     and remove command attribute in button column beacuse on click button it show error but on hit of enter
+    #       function runs..
+
+    
     new.bind("<Return>",showCalender)
 
     #adjusting widget in position
